@@ -9,6 +9,8 @@ import { CuentaUsuarioModule } from './cuenta-usuario/cuenta-usuario.module';
 import { CategoriasModule } from './categorias/categorias.module';
 import { AngularmaterialModule } from './angularmaterial/angularmaterial.module';
 import { SharedModule } from './shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,10 +27,16 @@ import { SharedModule } from './shared/shared.module';
     CuentaUsuarioModule,
     AngularmaterialModule,
     SharedModule,
+    ReactiveFormsModule, 
+    FormsModule, NgbModule
 
   ],
   exports: [
-    AngularmaterialModule
+    AngularmaterialModule,
+    ReactiveFormsModule,
+    FormsModule
+
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

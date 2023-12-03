@@ -2,12 +2,14 @@
 
 
 <app-header></app-header>
-<app-nav-sha></app-nav-sha>
+
+<app-nav-sha class="fixed-top" *ngIf="!UserLogin"></app-nav-sha>
+<app-nav-admin class="fixed-top" *ngIf="!AdminLogin"> </app-nav-admin>
 <hr>
 
 <router-outlet></router-outlet>
 
-<app-footer></app-footer>
+<app-footer class="fixed-bottom" ></app-footer>
 
 
 

@@ -8,6 +8,7 @@ import { ReadProductComponent } from './components/read-product/read-product.com
 import { UpdateProductComponent } from './components/update-product/update-product.component';
 import { DeleteProductComponent } from './components/delete-product/delete-product.component';
 import { NavAdminComponent } from './components/nav-admin/nav-admin.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,7 +23,9 @@ import { NavAdminComponent } from './components/nav-admin/nav-admin.component';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    ReactiveFormsModule, 
+    FormsModule
   ],
   exports: [ 
     LoginAdmComponent,

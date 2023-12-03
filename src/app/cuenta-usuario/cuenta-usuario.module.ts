@@ -5,23 +5,29 @@ import { CerrarSesionUsuarioComponent } from './components/cerrar-sesion-usuario
 import { DashUsuarioComponent } from './components/dash-usuario/dash-usuario.component';
 import { CuentaUsuarioRoutingModule } from './cuenta-usuario.routing.module';
 import { UsuarioHomeComponent } from './components/usuario-home/usuario-home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MicuentaComponent } from './components/micuenta/micuenta.component';
 
 @NgModule({
   declarations: [
     InicioUsuarioComponent,
     CerrarSesionUsuarioComponent,
     DashUsuarioComponent,
-    UsuarioHomeComponent
+    UsuarioHomeComponent,
+    MicuentaComponent
   ],
   imports: [
     CommonModule,
-    CuentaUsuarioRoutingModule
+    CuentaUsuarioRoutingModule,
+    ReactiveFormsModule, 
+    FormsModule
   ],
   exports: [
     InicioUsuarioComponent,
     CerrarSesionUsuarioComponent,
     DashUsuarioComponent,
-    UsuarioHomeComponent
+    UsuarioHomeComponent,
+    MicuentaComponent
   ]
 })
 export class CuentaUsuarioModule { }

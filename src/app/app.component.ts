@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
   title = 'pcshop';
+  UserLogin: boolean = false;
+  AdminLogin: boolean = true;
+
+
+
+
+
 }

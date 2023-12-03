@@ -6,17 +6,19 @@
             Inicio de Sesión Administrador
           </div>
           <div class="card-body">
-            <form>
+            <form [formGroup]="inicioAdmin">
               <div class="mb-3">
                 <label for="usuario" class="form-label">Usuario:</label>
-                <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Ingrese su usuario">
+                <input type="text" class="form-control" id="usuario" name="usuario" 
+                placeholder="Ingrese su usuario" formsControlName="usuario">
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label">Contraseña:</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese su contraseña">
+                <input type="password" class="form-control" id="password" name="password" 
+                placeholder="Ingrese su contraseña" formsControlName="password">
               </div>
               <div class="d-grid gap-2">
-                <button type="button" class="btn btn-primary">Iniciar Sesión</button>
+                <button type="submit" class="btn btn-primary" (click)="loginAdm()">Iniciar Sesión</button>
               </div>
             </form>
           </div>
@@ -24,3 +26,5 @@
       </div>
     </div>
   </div>
+
+  
