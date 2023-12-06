@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class LoginUsuarioService {
 
-  private usuarios = [
+  private credenciales = [
     { usuario: 'usuario1', password: '123' },
     { usuario: 'usuario2', password: '123' },
     // Agrega más usuarios según sea necesario
@@ -13,10 +13,13 @@ export class LoginUsuarioService {
 
   constructor( ) { }
 
+  //Esta autenticacion  es usando NgModel
   authenticate(username: string, password: string): boolean {
-    const usuarioEncontrado = this.usuarios.find(
-      user => user.usuario === username && user.password === password);
+    const usuarioEncontrado = this.credenciales.find(
+      cred => cred.usuario === username && cred.password === password);
     
     return !!usuarioEncontrado;
   }
+
+
 }

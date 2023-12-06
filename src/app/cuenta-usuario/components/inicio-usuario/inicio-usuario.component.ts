@@ -12,7 +12,7 @@ export class InicioUsuarioComponent {
 
   // inicioUsuario!: FormGroup
 
-  //Obtener datos de NgModel
+  //Obtener datos desde NgModel
   usuarioNg: string = ''
   passwordNg: string = ''
 
@@ -38,7 +38,6 @@ export class InicioUsuarioComponent {
       }
 
     }
-
 
   }
 

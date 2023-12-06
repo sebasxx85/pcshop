@@ -18,27 +18,29 @@ export class LoginAdmComponent {
     private loginServ: LoginAdmService
   )
 
-  {
-    this.inicioAdmin = formBuilder.group({
-       usuario: new FormControl('',[Validators.required]),
-       password: new FormControl('', [Validators.required]),
-    })
+  { }
 
+  ngOnInit() {
+    this.inicioAdmin = this.formBuilder.group({
+          usuario: new FormControl('',[]),
+          password: new FormControl('', []),
+    });
   }
 
-  getUsuario(){
+  get Usuario(){
     return this.inicioAdmin.get('usuario')?.value
   }
 
-  getPass(){
+  get Pass(){
     return this.inicioAdmin.get('password')?.value
   }
 
- //aca tengo que comunicar con controlador nav para que me muestre la barra usuario, usar rxjs
+ //Aca tengo que comunicar con controlador nav para que me muestre la barra usuario, usar rxjs
   loginAdm(){
     
     if (this.inicioAdmin.valid) {
       alert("Ingreso exitoso");
+      alert(this.Usuario);
 
       this.loginServ.loginAdm(this.inicioAdmin.value)
       this.router.navigateByUrl('dashboard')
